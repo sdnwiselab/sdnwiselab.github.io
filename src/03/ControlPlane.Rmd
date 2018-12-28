@@ -1,0 +1,26 @@
+---
+title: "SDN-WISE Control Plane"
+output: html_document
+---
+
+This document explains in details the SDN-WISE Control Plane.
+How to get the code
+
+Work in progress...
+
+```
+git clone
+git checkout
+```
+
+# Java Controller
+
+## Adaptation
+
+### Adapters
+
+## FlowVisor
+
+## Controller
+
+# ONOS Integration

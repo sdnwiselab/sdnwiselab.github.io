@@ -1,0 +1,88 @@
+#screenDimmer, #contact-form{display:none;position:absolute;}
+#advice{display:none;position:absolute;}
+#screenDimmer {z-index:9;top:0;left:0;width:100%;height:100%;background:#000;opacity:.7;
+    /* ie opacity */ -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";filter:alpha(opacity=70);}
+
+
+#contact-form {overflow:auto;top:auto;/*width:100%;*/z-index:10;margin-left:40%/*;margin-top:-193px;*/}
+#advice{overflow:auto;top:auto;/*width:100%;*/z-index:10;margin-left:40%/*;margin-top:-193px;*/}
+/*-------------------------------------
+FORM CORE
+------------------------------------------*/
+
+form#contact fieldset {
+	padding: 10px 20px 20px 20px;
+	margin: 0 auto;
+	border: 0;
+	background-color: #fff;
+	width: 290px;
+	text-align: left;
+	border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -moz-box-shadow: 0px 0px 10px #d3d3d3; 
+	-webkit-box-shadow: 0px 2px 10px #d3d3d3; 
+	box-shadow: 0px 0px 10px #d3d3d3; 
+}
+
+form#contact input[type="text"], input[type="url"], 
+input[type="email"], input[type="tel"], textarea {
+	margin: 3px 0 0 0;
+	padding: 6px; 
+	width: 260px; 
+	font-family: arial, sans-serif; 
+	font-size: 12px; 
+	border: 1px solid #ccc;
+    background: -webkit-gradient(linear, left top, left 15, from(#FFFFFF), color-stop(4%, #f4f4f4), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #f4f4f4 1px, #FFFFFF 15px);
+}
+
+form#contact textarea {
+	width: 275px; 
+	height: 150px;
+}
+
+form#contact label {
+	display: block;
+	font-size: 13px;
+	color: #666;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+form#contact label.error { 
+	width: 270px;
+	margin: 3px 0 0 0;
+	display: block;
+	color: #cf0101;                              
+	font-size: 11px; 
+	text-align: right;
+}
+
+form#contact .placeholder {
+	color: #aaa;
+}
+
+form#contact .button {
+	display: inline-block;
+	margin: 15px 0 0 90px;
+	padding: 5px 15px 5px 15px;
+	background-color: #3795DA;
+	border: none;
+	color: #fff;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+
+form#contact .button:hover {
+	background-color: #236db5;
+	cursor: pointer;
+}
+
+form#contact .button:active {
+	margin-top: 16px;
+	background-color: #275d90;
+	cursor: pointer;
+}
+

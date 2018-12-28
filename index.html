@@ -1,1 +1,388 @@
-SDN-WISE Web Site: Work in progress
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>SDN-WISE</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="SDN-WISE is a Software Defined Networking solution 
+	for the Internet of Things" />
+	<meta name="keywords" content="Internet of Things, IoT, WSN, SDN, Wireless Sensor Networks, 
+	Software Defined Networking, 物聯網, 802.15.4, MAC, Mote, Node, Network, Sensors, ONOS, Contiki, Cooja" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="icon" href="images/favicon.png" type="image/png" />
+	<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrollzer.min.js"></script>
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-layers.min.js"></script>
+	<script src="js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-xlarge.css" />
+	</noscript>
+
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "Product",
+	  "url": "https://sdnwiselab.github.io/",
+	  "name": "SDN-WISE",
+	  "logo": "https://sdnwiselab.github.io/images/logo.png"
+	}
+	</script>
+	<script src="js/consent.js" defer></script>
+	
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+
+
+<body>
+        <div id="cookieBanner">
+            <div id="cookieBannerClose"><a href="#">x</a></div>
+            This website uses third party cookies exclusively to collect analytics data.
+            If you continue browsing or close this notice, you will accept their use.
+            <div id="cookieBannerActions">
+                <a class="noconsent" href="cookies.html">Learn about this website's cookies</a>
+                &mdash;
+                <a class="denyConsent noconsent" href="#">Disallow cookies</a>
+            </div>
+        </div>
+
+	<div id="wrapper">
+		<!-- Header -->
+		<section id="header" class="skel-layers-fixed">
+			<header>
+				<h1>Header</h1>
+				<span class="image fit"><img src="images/logo.svg" alt="SDN-WISE" /></span>
+				<p>The Stateful <br />Software Defined Networking solution<br />
+					for Wireless Sensor Networks</p>
+				</header>
+				<nav id="nav">
+					<h2>Navigation</h2>
+					<ul>
+						<li><a href="#Home" class="active">Home</a></li>
+						<li><a href="#Overview">Overview</a></li>
+						<li><a href="#Documentation">Documentation</a></li>
+						<li><a href="#Downloads">Downloads</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Home -->
+				<section id="Home">
+					<div class="container">
+						<header class="major">
+							<h2>SDN-WISE</h2>
+							<p>The stateful Software Defined Networking solution<br />
+								for the Internet of Things</p>
+							</header>
+							<p>
+								<strong>SDN-WISE</strong> is a <strong>S</strong>oftware <strong>D</strong>efined <strong>N</strong>etworking solution for <strong>WI</strong>reless <strong>SE</strong>nsor Networks. 
+								The aim of SDN-WISE is to simplify the management of the network, 
+								the development of novel applications, and the experimentation of new networking solutions.
+							</p> 
+						</div>
+					</section>
+
+					<!-- Overview -->
+					<section id="Overview">
+						<div class="container">
+							<h3>Overview</h3>
+							<p> 
+								<span class="image right"><img src="images/classic_sdn.svg" alt="A typical SDN network" /></span>
+
+								Software Defined Networking (SDN) is envisioned as a way to reduce
+								the complexity of network configuration and management. New network control and
+								management solutions can be easily deployed on existing equipment as simply as it is to 
+								install new programs on a computer.
+							</p>
+
+							<p>
+								In SDN networks, management operations are centralized and physically separated from
+								forwarding operations. In fact <strong>SDN Switches</strong> classify and forward packets 
+								according to the so called <em>flow rules</em> sent by the <strong>SDN Controller</strong>(s). 
+							</p>
+
+							<p>
+								When a switch has no information available to classify an incoming packet, it requests 
+								the assistance from one or several controllers which should provide an appropriate rule. 
+								The policies applied by controllers, 
+								which in the end define the entire network behavior, can be easily and rapidly 
+								modified by installing a new Controller software. 
+							</p>
+
+							<p>
+								SDN-WISE uses this paradigm in wireless infrastructureless networks. 
+							</p>
+
+							<h4>SDN-WISE Protocol Architecture</h4>
+
+							<p>
+								The protocol architecture of SDN-WISE is shown in the following figure.
+							</p>
+
+							<span class="image fit"><img src="images/stack.svg" alt="SDN-WISE Protocol Stack"/></span>
+
+							<p>
+								SDN-WISE is based on IEEE 802.15.4 physical and MAC layers. Network elements can be distinguished into
+								Sinks and Nodes. The difference between Sinks and the Nodes is that the formers are equipped with
+								a network interface connected to an infrastructured network. Therefore, all control packets should find
+								their way towards a Sink to leave the WSN and reach the Controller.
+							</p>
+
+							<p>
+								On top of the MAC layer, the <strong>Forwarding</strong> (FWD) layer 
+								handles incoming packets as specified in the WISE Flow Table.
+								The FWD layer updates this table according to the configurations sent by 
+								the Control plane.
+							</p>
+
+							<p>
+								The <strong>In-Network Packet Processing</strong> (INPP) layer runs on top of the Forwarding layer and it 
+								is responsible for operations like data aggregation or other in-network processing.
+							</p>
+
+							<p>
+								If no entry in the WISE Flow Table matches the current packet, a request is sent to the Control plane.
+								In order to contact the Control plane, each node has to know its best next hop towards a Sink. 
+								This value is calculated in a distributed way using the <strong>Topology Discovery</strong> (TD) layer through beaconing. 
+							</p>
+
+							<p>
+								In the <strong>Control Plane</strong>, network logics are dictated by one or several <strong>Controller</strong>(s), 
+								and a <strong>WISE-Visor</strong>.
+								The WISE-Visor abstracts network resources so that different logical networks, 
+								with different management policies set by different Controllers, can run over the same set of physical devices.
+							</p>
+
+							<p>
+								Between the Sinks and the WISE-Visor there is the 
+								<strong>Adaptation</strong> layer which is responsible for formatting 
+								messages received from a Sink in such a way that they can be handled by the 
+								WISE-Visor and <em>viceversa</em>.
+							</p>
+
+							<h4>SDN-WISE Approach</h4>
+							<p>
+								The behavior of SDN-WISE nodes is completely encoded into three data structures:
+							</p>
+							<div class="table-wrapper">
+								<table class="alt">
+									<tbody>
+										<tr>
+											<td>WISE States Array</td>
+											<td>Accepted IDs Array</td>
+											<td>WISE Flow Table</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+
+							<h5>WISE States Array</h5>
+							<p>
+								SDN-WISE nodes are characterized by a current state for each active
+								Controller. The WISE States Array is the data structure 
+								containing such information.
+							</p>
+
+							<h5>Accepted IDs Array</h5>
+							<p>
+								The Accepted IDs array allows a sensor node to select packets to 
+								process. This is useful especially for achieving multicast communication using the 
+								broadcast nature of the wireless medium.  
+							</p>
+
+							<span class="image left"><img src="images/sensor_node.png" alt="A sensor node" /></span>
+
+							<h5>WISE Flow Table</h5>
+							<p>
+								Each entry of the WISE Flow Table has a Matching Rules section which specifies the 
+								conditions under which the entry applies. If these conditions are satisfied the sensor 
+								will perform the action contained in the Action section of the entry.
+							</p>
+
+
+						</div>
+					</section>
+
+					<!-- Documentation -->
+					<section id="Documentation">
+						<div class="container">
+							<h3>Documentation</h3>
+							<p>
+								More details on SDN-WISE can be found here: 
+							</p>
+
+							<h4>Papers</h4>
+
+							<div class="table-wrapper">
+								<table class="alt">
+									<tbody>
+										<tr>	
+											<td>
+												<span class="authors">S. Milardo, A. Venkatasubramanian, K. Vijayan, N. Prabagarane, and G. Morabito.</span> 
+												<a href="https://ieeexplore.ieee.org/document/8385538/">
+													From Reactive to Predictive Flow Instantiation: An Artificial Neural Network Approach to the SD-IoT
+												</a>. 
+												in <span class="conference">European Wireless</span>. 2018</td>
+										</tr>
+										<tr>	
+											<td><span class="authors">A.G. Anadiotis, S. Milardo, G. Morabito, and S. Palazzo.</span> <a href="http://ieeexplore.ieee.org/document/8289363/" target="_blank">Towards Unified Control of Networks of Switches and Sensors through a Network Operating System</a>. in <span class="conference">IEEE Internet of Things Journal</span>. 2018</td>
+										</tr>
+										<tr>	
+											<td><span class="authors">P. Di Dio, S. Faraci, L. Galluccio, S. Milardo, G. Morabito, S. Palazzo, and P. Livreri.</span> <a href="http://ieeexplore.ieee.org/document/7528421/" target="_blank">Exploiting State Information to Support QoS in Software-Defined WSNs</a>. in <span class="conference">The 15th IFIP Annual Mediterranean Ad Hoc Networking Workshop</span>. June 2016</td>
+										</tr>
+										<tr>
+											<td><span class="authors">A.G. Anadiotis, L. Galluccio, S. Milardo, G. Morabito, and S. Palazzo.</span> <a href="http://ieeexplore.ieee.org/document/7389118/" target="_blank">Towards a Software-Defined Network Operating System for the IoT</a>. Proc. of <span class="conference">IEEE World Forum on Internet of Things</span>. December 2015</td>
+										</tr>
+										<tr>
+											<td><span class="authors">A.G. Anadiotis, G. Morabito, and S. Palazzo.</span> <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7314923" target="_blank">An SDN-assisted Framework for Optimal Deployment of MapReduce Functions in WSNs</a>. in <span class="conference">IEEE Transactions on Mobile Computing</span>. 2015</td>
+										</tr>			
+										<tr>
+											<td><span class="authors">L. Galluccio, S. Milardo, G. Morabito, and S. Palazzo.</span> <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7179322" target="_blank">Reprogramming Wireless Sensor Networks by Using SDN-WISE: a Hands-On Demo</a>. Proc. of <span class="conference">IEEE INFOCOM 2015 Demo</span>. April 2015.</td>
+										</tr>			
+										<tr>
+											<td><span class="authors">L. Galluccio, S. Milardo, G. Morabito, and S. Palazzo.</span> <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7218418" target="_blank">SDN-WISE: Design, prototyping and experimentation of a stateful SDN solution for WIreless SEnsor networks</a>. Proc. of <span class="conference">IEEE INFOCOM 2015</span>. April 2015.</td>
+										</tr>
+										<tr>
+											<td><span class="authors">C. Buratti, A. Stajkic, G. Gardasevic, S. Milardo, M.D. Abrignani, S. Mijovic, G. Morabito, and R. Verdone</span> <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7172291" target="_blank">Testing Protocols for the Internet of Things on the EuWIn Platform</a>. in <span class="conference">IEEE Internet of Things Journal</span>. 2015</td>
+										</tr>
+										<tr>
+											<td><span class="authors">S. Costanzo, L. Galluccio, G. Morabito, and S. Palazzo.</span> <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6385039" target="_blank">Software Defined Wireless Networks: Unbridling SDNs</a>. Proc. of <span class="conference">EWSDN 2012</span>. October 2012.</td>
+										</tr>	
+									</tbody>
+								</table>
+							</div>
+
+
+							<h4>Guides and Tutorials</h4>
+
+							<div class="table-wrapper">
+								<table class="alt">
+									<tbody>
+										<tr>
+											<td><a href="docs/guides/GetStarted.html" target="_blank">Get Started with SDN-WISE</a></td>
+										</tr>
+										<tr>
+											<td><a href="docs/guides/Core.html" target="_blank">Understanding the SDN-WISE Core</a></td>
+										</tr>
+										<tr>
+											<td><a href="docs/guides/GetStartedONOS.html" target="_blank">Controlling heterogeneous networks using SDN-WISE and ONOS</a></td>
+										</tr>
+										<!--
+										<tr>
+											<td><a href="docs/guides/DataPlane.html" target="_blank">
+												Understanding the SDN-WISE Data Plane (Coming soon)
+											</a></td>
+										</tr>
+										<tr>
+											<td><a href="docs/guides/ControlPlane.html" target="_blank">
+												Understanding the SDN-WISE Control Plane (Coming soon)
+											</a></td>
+										</tr>
+	
+										
+										<tr>
+											<td><a href="docs/guides/AppJava" target="_blank">Write a SDN-WISE App using Java emulated Cooja Nodes (Coming soon)</a></td>
+										</tr>
+										<tr>
+											<td><a href="docs/guides/AppContiki.html" target="_blank">Write a SDN-WISE App using Contiki Nodes (Coming soon)</a></td>
+										</tr>
+										-->
+									</tbody>
+								</table>
+							</div>
+
+
+							<h4>Talks</h4>
+
+							<div class="table-wrapper">
+								<table class="alt">
+									<tbody>
+										<tr>
+											<td><span class="authors">S. Milardo.</span> <a href="docs/slides/ew18.pdf" target="_blank">From Reactive to Predictive Flow Instantiation: An Artificial Neural Network Approach to the SD-IoT</a>. <span class="conference">European Wireless 2018</span>. May 2018.</td>
+										</tr>
+										<tr>
+											<td><span class="authors">G. Morabito.</span> <a href="docs/slides/sdn_wise_cm.pdf" target="_blank">Wireless Software Defined Networks</a>. <span class="conference">International Conference on Information Networking 2018</span>. January 2018.</td>
+										</tr>
+										<tr>
+											<td><span class="authors">S. Milardo.</span> <a href="docs/slides/sdn_wise_qos.pdf" target="_blank">Exploiting State Information to Support QoS in Software-Defined WSNs</a>. <span class="conference">MedHocNet 2016</span>. June 2016.</td>
+										</tr>
+										<tr>
+											<td><span class="authors">G. Morabito.</span> <a href="docs/slides/sdn_wise_sssp.pdf" target="_blank">Networking issues for the Internet of Things</a>. IEEE SPS Italy Chapter Summer School on Signal Processing <span class="conference">(S3P)</span>. September 2015.</td>
+										</tr>
+										<tr>
+											<td><span class="authors">S. Milardo.</span> <a href="docs/slides/sdn_wise_intro.pdf" target="_blank">Introduzione a SDN-WISE</a>. May 2015.</td>
+										</tr>
+										<tr>
+											<td><span class="authors">G. Morabito.</span> <a href="docs/slides/sdn_wise_hk.pdf" target="_blank">SDN-WISE: A SDN solution for Wireless Sensor Networks</a>. <span class="conference">INFOCOM 2015</span>. April 2015.</td>
+										</tr>
+										<tr>
+											<td><span class="authors">S. Milardo.</span> <a href="docs/slides/sdn_wise_cavalese.pdf" target="_blank">SDN-WISE: A “wise” choice for Wireless Sensor Networks Management, Experimentation, and Application Development</a>. Proc. of <span class="conference">INW 2015</span>. January 2015.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<h4>Posters</h4>
+
+							<div class="table-wrapper">
+								<table class="alt">
+									<tbody>
+										<tr>
+											<td><span class="authors">S. Milardo.</span> <a href="docs/posters/sdn_wise_gtti.pdf" target="_blank">Controlling Wireless Sensor Networks through a Software Defined approach</a>. June 2016.</td>
+										</tr>
+										<tr>
+											<td><span class="authors">L. Galluccio, S. Milardo, G. Morabito, and S. Palazzo.</span> <a href="docs/posters/sdn_wise_poster.pdf" target="_blank">Reprogramming Wireless Sensor Networks by Using SDN-WISE: a Hands-On Demo</a>. April 2015.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</section>
+
+
+					
+					<!-- Downloads -->
+					<section id="Downloads">
+						<div class="container">
+							<h3>Downloads</h3>
+							<div class="features">
+								<article>
+									<a href="#" class="image"><img src="images/sensor_nodes.jpg" alt="An Embit EMB-Z2530PA node and a TI MSP430 eZ430-RF2500 node" /></a>
+									<div class="inner">
+										<h4>Source Code</h4>
+										<p>Our code is publicly available on <a href="https://github.com/sdnwiselab/" target="_blank">GitHub</a>.</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>		
+				</div>
+
+				<!-- Footer -->
+				<section id="footer">
+					<h1>Footer</h1>
+					<div class="container">
+						<ul class="copyright">
+							<li>&copy; SDN-WISE. All rights reserved.</li>
+							<li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+							<li id="shiny_image"></li>
+						</ul>
+					</div>
+				</section>			
+			</div>
+		</body>
+		</html>

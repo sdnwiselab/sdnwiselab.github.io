@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+html, body, #wrapper {
+   background-color: #3795da;  
+}
+
+div {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 368px;
+   height: auto;
+   margin-top: -129px; 
+   margin-left: -184px;
+}
+
+img {
+   width: 288px;
+   height: auto;
+}
+
+fig, figcaption {
+	display: block;
+	font-family: arial;
+	font-style: italic;
+	font-variant: small-caps;
+	color: white;
+	margin: 5px;
+	text-align: center;
+}

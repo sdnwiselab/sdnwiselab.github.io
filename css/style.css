@@ -37,7 +37,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #3795DA !important;
+			color: #2a60a6 !important;
 		}
 
 	strong, b {
@@ -726,6 +726,12 @@
 
 		table td {
 			padding: 0.75em 0.75em;
+		}
+
+		table.alt tbody tr td.new-article {
+			color: #fff;
+			background: #3795DA;
+			border: solid 2px #2a60a6;
 		}
 
 		table th {

@@ -30,12 +30,20 @@
 
 	<script type="application/ld+json">
 	{
-	  "@context": "http://schema.org",
-	  "@type": "Product",
-	  "url": "https://sdnwiselab.github.io/",
-	  "name": "SDN-WISE",
-	  "logo": "https://sdnwiselab.github.io/images/logo.png"
-	}
+ 	"@context": ["http://schema.org", {"author": {"@id": "schema:author"} } ] ,
+    "name": "SDN-WISE",
+    "description": "SDN-WISE is a Software Defined Networking solution for the Internet of Things.",
+    "image": "https://sdnwiselab.github.io/images/logo.png",
+    "@type": "SoftwareSourceCode",
+    "author": {
+        "@id": "https://orcid.org/0000-0001-8884-2592",
+        "@type": "Person",
+        "givenName": "Sebastiano",
+        "familyName":  "Milardo"
+    },
+    "codeRepository": "https://github.com/sdnwiselab/",
+    "version": "1.0.0"
+    }
 	</script>
 	<script src="js/consent.js" defer></script>
 	

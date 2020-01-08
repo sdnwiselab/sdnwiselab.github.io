@@ -17,12 +17,12 @@
 	
 	<meta http-equiv="Content-Security-Policy" content="
 		default-src 'self' fonts.gstatic.com maxcdn.bootstrapcdn.com; 
-		script-src 'self' www.google-analytics.com www.googletagmanager.com; 
+		script-src 'self' 'unsafe-inline' www.google-analytics.com www.googletagmanager.com; 
 		connect-src 'self'; 
 		form-action 'self';
 		base-uri 'self';
 		img-src 'self' noscript.shinystat.com s13.shinystat.com www.google-analytics.com; 
-		style-src 'self' fonts.googleapis.com maxcdn.bootstrapcdn.com;
+		style-src 'self' 'unsafe-inline' fonts.googleapis.com maxcdn.bootstrapcdn.com;
 		object-src 'self';
 	">
 	<meta name="referrer" content="no-referrer-when-downgrade">

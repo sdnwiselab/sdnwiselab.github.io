@@ -40,6 +40,7 @@ $(document).ready(function() {
     }
 
     function analytics() {
+        /*
         (function(d, s, id){
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)){ return; }
@@ -55,7 +56,7 @@ $(document).ready(function() {
         gtag('js', new Date());
         gtag('config', 'UA-112624043-1');
         gtag('anonymizeIp', undefined);
-
+        */
         $("#shiny_image").html("<img src=\"https://noscript.shinystat.com/cgi-bin/shinystat.cgi?USER=sdnwise\" alt=\"Blog counter\"/>")
     }
 

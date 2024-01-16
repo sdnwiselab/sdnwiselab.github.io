@@ -1,20 +1,21 @@
 <!DOCTYPE HTML>
 <!--
 	Read Only by HTML5 UP
-	html5up.net | @n33co
+	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html lang="en">
-<head>
-	<title>SDN-WISE</title>
-	<meta name="google-site-verification" content="bX7Hk3pd4XzdMpwfAPJBNClW_iLqDhrvod1amFKFMXE" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="SDN-WISE is a Software Defined Networking solution 
+<html>
+	<head>
+		<title>SDN-WISE</title>
+		<meta name="google-site-verification" content="bX7Hk3pd4XzdMpwfAPJBNClW_iLqDhrvod1amFKFMXE" />
+		<meta charset="utf-8" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="SDN-WISE is a Software Defined Networking solution 
 	for the Internet of Things" />
 	<meta name="keywords" content="Internet of Things, IoT, WSN, SDN, Wireless Sensor Networks, 
 	Software Defined Networking, 物聯網, 802.15.4, MAC, Mote, Node, Network, Sensors, ONOS, Contiki, Cooja" />
-	
+	<link rel="icon" href="images/favicon.png" type="image/png" />
 	<meta http-equiv="Content-Security-Policy" content="
 		default-src 'self' fonts.gstatic.com maxcdn.bootstrapcdn.com; 
 		script-src 'self' 'unsafe-inline' www.google-analytics.com www.googletagmanager.com; 
@@ -26,48 +27,31 @@
 		object-src 'self';
 	">
 	<meta name="referrer" content="no-referrer-when-downgrade">
-	
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="icon" href="images/favicon.png" type="image/png" />
-	<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.scrollzer.min.js"></script>
-	<script src="js/jquery.scrolly.min.js"></script>
-	<script src="js/skel.min.js"></script>
-	<script src="js/skel-layers.min.js"></script>
-	<script src="js/init.js"></script>
-	<noscript>
-		<link rel="stylesheet" href="css/skel.css" />
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/style-xlarge.css" />
-	</noscript>
 
-	<script type="application/ld+json">
-	{
- 	"@context": ["http://schema.org", {"author": {"@id": "schema:author"} } ] ,
-    "name": "SDN-WISE",
-    "description": "SDN-WISE is a Software Defined Networking solution for the Internet of Things.",
-    "image": "https://sdnwiselab.github.io/images/logo.png",
-    "@type": "SoftwareSourceCode",
-    "author": {
-        "@id": "https://orcid.org/0000-0001-8884-2592",
-        "@type": "Person",
-        "givenName": "Sebastiano",
-        "familyName":  "Milardo"
-    },
-    "codeRepository": "https://github.com/sdnwiselab/",
-    "version": "1.0.0"
-    }
-	</script>
-	<script src="js/consent.js" defer></script>
-	
-	
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</head>
+		<link rel="stylesheet" href="assets/css/main.css" />
+					<script type="application/ld+json">
+				{
+			 	"@context": ["http://schema.org", {"author": {"@id": "schema:author"} } ] ,
+			    "name": "SDN-WISE",
+			    "description": "SDN-WISE is a Software Defined Networking solution for the Internet of Things.",
+			    "image": "https://sdnwiselab.github.io/images/logo.png",
+			    "@type": "SoftwareSourceCode",
+			    "author": {
+			        "@id": "https://orcid.org/0000-0001-8884-2592",
+			        "@type": "Person",
+			        "givenName": "Sebastiano",
+			        "familyName":  "Milardo"
+			    },
+			    "codeRepository": "https://github.com/sdnwiselab/",
+			    "version": "1.0.0"
+			    }
+			</script>
+			<script src="assets/js/consent.js" defer></script>
 
+	</head>
+	<body class="is-preload">
 
-<body>
-        <div id="cookieBanner">
+		<div id="cookieBanner">
             <div id="cookieBannerClose"><a href="#">x</a></div>
             This website uses third party cookies exclusively to collect analytics data.
             If you continue browsing or close this notice, you will accept their use.
@@ -78,17 +62,14 @@
             </div>
         </div>
 
-	<div id="wrapper">
+
 		<!-- Header -->
-		<section id="header" class="skel-layers-fixed">
-			<header>
-				<h1>Header</h1>
-				<span class="image fit"><img src="images/logo.svg" alt="SDN-WISE" /></span>
-				<p>The Stateful <br />Software Defined Networking solution<br />
-					for Wireless Sensor Networks</p>
+			<section id="header">
+				<header>
+					<span class="image fit"><img src="images/logo.svg" alt="SDN-WISE" id="logo"/></span>
+					<p>The Stateful <br />Software Defined Networking solution<br />for Wireless Sensor Networks</p>
 				</header>
 				<nav id="nav">
-					<h2>Navigation</h2>
 					<ul>
 						<li><a href="#Home" class="active">Home</a></li>
 						<li><a href="#Overview">Overview</a></li>
@@ -98,12 +79,18 @@
 				</nav>
 			</section>
 
-			<!-- Main -->
-			<div id="main">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
+			<div id="main">
+										<div class="image main" data-position="center">
+							<img src="images/banner.jpg" alt="" />
+						</div>
 				<!-- Home -->
 				<section id="Home">
 					<div class="container">
+
+
 						<header class="major">
 							<h2>SDN-WISE</h2>
 							<p>The stateful Software Defined Networking solution<br />
@@ -253,7 +240,7 @@
 								<table class="alt">
 									<tbody>
 										<tr>	
-											<td class="new-article">[NEW] 
+											<td>
 												<span class="authors">L. Lo Bello, A. Lombardo, S. Milardo, G. Patti and M. Reno.</span> 
 												<a href="https://ieeexplore.ieee.org/document/8949749/">
 													Experimental Assessments and Analysis of an SDN Framework to Integrate Mobility Management in Industrial Wireless Sensor Networks
@@ -421,7 +408,6 @@
 
 				<!-- Footer -->
 				<section id="footer">
-					<h1>Footer</h1>
 					<div class="container">
 						<ul class="copyright">
 							<li>&copy; SDN-WISE. All rights reserved.</li>
@@ -429,7 +415,17 @@
 							<li id="shiny_image"></li>
 						</ul>
 					</div>
-				</section>			
+				</section>	
+
 			</div>
-		</body>
-		</html>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script
+	</body>
+</html>
